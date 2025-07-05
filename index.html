@@ -5,22 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sourin Saha - Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
+    <!--
+    <meta name="description" content="Portfolio of Sourin Saha, Full Stack Developer specializing in Node.js, backend, and scalable web applications.">
+    <meta name="keywords" content="Sourin Saha, Full Stack Developer, Node.js, Portfolio, Backend, MCA, Computer Science">
+    -->
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="logo">Sourin Saha</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav class="main-nav container" role="navigation" aria-label="Main Navigation">
+            <a href="#home" class="logo" tabindex="0" aria-label="Go to Home">Sourin Saha</a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home" tabindex="0">Home</a></li>
+                <li><a href="#about" tabindex="0">About</a></li>
+                <li><a href="#skills" tabindex="0">Skills</a></li>
+                <li><a href="#projects" tabindex="0">Projects</a></li>
+                <li><a href="#experience" tabindex="0">Experience</a></li>
+                <li><a href="#achievements" tabindex="0">Achievements</a></li>
+                <li><a href="#certifications" tabindex="0">Certifications</a></li>
+                <li><a href="#education" tabindex="0">Education</a></li>
+                <li><a href="#languages" tabindex="0">Languages</a></li>
+                <li><a href="#contact" tabindex="0">Contact</a></li>
             </ul>
+            <button id="theme-toggle" aria-label="Toggle dark theme" title="Toggle dark theme">🌙</button>
         </nav>
     </header>
+
+    
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -31,7 +46,8 @@
             </div>
             <div class="cta-buttons">
                 <a href="#projects" class="cta-button">View My Work</a>
-                <a href="https://github.com/Sourin123" class="cta-button secondary" target="_blank">GitHub Profile</a>
+                <a href="https://github.com/Sourin123" class="cta-button secondary" target="_blank" rel="noopener">GitHub Profile</a>
+                <a href="Sourin_Saha_Resume.pdf" class="cta-button" download aria-label="Download Resume">⬇️ Download Resume</a>
             </div>
         </div>
     </section>
@@ -136,10 +152,10 @@
                             </ul>
                         </div>
                         
-                        <div class="project-links">
+                        <!-- <div class="project-links">
                             <a href="https://github.com/Sourin123" class="project-link" target="_blank" disable >📂 View Code</a>
                             <a href="#" class="project-link" disable >🌐 Live Demo</a>
-                        </div>
+                        </div> -->
                         
                         <div class="project-tech">
                             <span class="tech-tag">Node.js</span>
@@ -170,7 +186,7 @@
                         
                         <div class="project-links">
                             <a href="https://github.com/Sourin123/CURD" class="project-link" target="_blank">📂 View Code</a>
-                            <a href="#" class="project-link">📊 Project Demo</a>
+                            <a href="#" class="project-link"  disabled>📊 Project Demo</a>
                         </div>
                         
                         <div class="project-tech">
@@ -181,6 +197,24 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section professional-experience-section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="experience-role">Freelance Full Stack Developer</div>
+                    <div class="experience-company">Anubhuti Prakasha (2023)</div>
+                    <ul>
+                        <li>Developed and deployed a complete e-commerce platform for a publishing client.</li>
+                        <li>Integrated secure payment gateway and inventory management.</li>
+                        <li>Improved client’s online sales and customer engagement.</li>
+                    </ul>
+                </div>
+                <!-- Add more experience as needed -->
             </div>
         </div>
     </section>
@@ -229,6 +263,27 @@
         </div>
     </section>
 
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Awards</h2>
+            <ul>
+                <li>Backend Development Certification – Developer Student Clubs (2023)</li>
+                <li>Backend Development Certification – Devtown (2023)</li>
+                <li>Academic Excellence Award – B.Sc. Computer Science (2023)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">Blog & Articles</h2>
+            <ul>
+                <li><a href="https://yourblog.com/article1" target="_blank" rel="noopener">How to Build Scalable Node.js APIs</a></li>
+                <!-- Add more articles or remove if not available -->
+            </ul>
+        </div>
+    </section> -->
+
     <section id="education" class="section">
         <div class="container">
             <h2 class="section-title">Education</h2>
@@ -274,82 +329,10 @@
             </div>
         </div>
     </section>
+   
 
     <!-- New Contact Section -->
     <section id="contact" class="section">
-        <style>
-            /* Contact Section Styles */
-            .contact-grid {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                margin-top: 2rem;
-            }
-            .contact-details, .contact-form {
-                flex: 1 1 300px;
-                background: #f8f9fa;
-                border-radius: 10px;
-                padding: 2rem 1.5rem;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            }
-            .contact-details h3 {
-                margin-top: 0;
-                color: #4a56a6;
-            }
-            .contact-details p {
-                margin: 0.5rem 0;
-                font-size: 1rem;
-            }
-            .contact-details a {
-                color: #667eea;
-                text-decoration: none;
-                word-break: break-all;
-            }
-            .contact-form form {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .contact-form label {
-                font-weight: 600;
-                margin-bottom: 0.3rem;
-            }
-            .contact-form input,
-            .contact-form textarea {
-                padding: 0.7rem 1rem;
-                border: 1px solid #d1d5db;
-                border-radius: 6px;
-                font-size: 1rem;
-                background: #fff;
-                resize: vertical;
-                transition: border-color 0.2s;
-            }
-            .contact-form input:focus,
-            .contact-form textarea:focus {
-                border-color: #667eea;
-                outline: none;
-            }
-            .contact-form button.cta-btn {
-                background: #667eea;
-                color: #fff;
-                border: none;
-                border-radius: 6px;
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: background 0.2s;
-            }
-            .contact-form button.cta-btn:hover {
-                background: #4a56a6;
-            }
-            @media (max-width: 900px) {
-                .contact-grid {
-                    flex-direction: column;
-                    gap: 1.5rem;
-                }
-            }
-        </style>
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-grid">
@@ -358,8 +341,9 @@
                     <p><strong>Location:</strong> Mankar, Purba Burdwan, West Bengal</p>
                     <p><strong>Email:</strong> <a href="mailto:sourinsaha2001@gmail.com">sourinsaha2001@gmail.com</a></p>
                     <p><strong>Phone:</strong> <a href="tel:+919832645089">+91-9832645089</a></p>
-                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sourin-saha-3586281b7" target="_blank">sourin-saha-3586281b7</a></p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/Sourin123" target="_blank">Sourin123</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sourin-saha-3586281b7" target="_blank" rel="noopener">sourin-saha-3586281b7</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/Sourin123" target="_blank" rel="noopener">Sourin123</a></p>
+                    <a href="Sourin_Saha_Resume.pdf" class="cta-btn" download aria-label="Download Resume" style="margin-top:1rem;display:inline-block;">⬇️ Download Resume</a>
                 </div>
                 <div class="contact-form">
                     <form action="mailto:sourinsaha2001@gmail.com" method="POST" enctype="text/plain">
@@ -450,6 +434,58 @@
 
         sections.forEach(section => {
             fadeObserver.observe(section);
+        });
+
+        // Dark theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('theme');
+        function setTheme(dark) {
+            document.body.classList.toggle('dark-theme', dark);
+            themeToggle.textContent = dark ? '☀️' : '🌙';
+        }
+        // Default theme is light unless user selected dark
+        if (storedTheme === 'dark') {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+        themeToggle.addEventListener('click', () => {
+            const isDark = !document.body.classList.contains('dark-theme');
+            setTheme(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        function closeNavMenu() {
+            navMenu.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
+        function openNavMenu() {
+            navMenu.classList.add('nav-open');
+            navToggle.setAttribute('aria-expanded', 'true');
+        }
+        navToggle.addEventListener('click', function () {
+            const isOpen = navMenu.classList.contains('nav-open');
+            if (isOpen) {
+                closeNavMenu();
+            } else {
+                openNavMenu();
+            }
+        });
+        // Close nav on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) closeNavMenu();
+            });
+        });
+        // Ensure nav is visible on resize (desktop/mobile switch)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                navMenu.classList.remove('nav-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
         });
     </script>
 </body>
